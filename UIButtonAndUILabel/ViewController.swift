@@ -9,11 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // скрываем label по умолчанию
+        label.isHidden = true
+        // меняем размер текста
+        label.font = label.font.withSize(35)
+        // меняем цвет текста
+        label.textColor = UIColor.white
+        
+        //расположение текста кнопки
+        button.setTitle("Get result", for: .normal)
+        // цвет текста кнопки
+        button.setTitleColor(.blue, for: .normal)
+        // цвет фона кнопки
+        button.backgroundColor = .yellow
     }
+    
+    @IBAction func pressedButton(_ sender: UIButton) {
+        label.text = "Hello, world!"
+        label.isHidden = false
+    }
+    
 
 
 }
