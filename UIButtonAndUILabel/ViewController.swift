@@ -31,11 +31,21 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pressedButton(_ sender: UIButton) {
-        label.text = "Hello, world!"
-        label.isHidden = false
+        
+        if label.isHidden {
+            label.isHidden = false
+            label.text = "Hello, world!"
+            
+            button.setTitle("Clear", for: UIControl.State.normal)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = .red
+        }else {
+            label.isHidden = true
+            
+            button.setTitle("Get result", for: .normal)
+            button.setTitleColor(.blue, for: .normal)
+            button.backgroundColor = .yellow
+        }
     }
-    
-
-
 }
 
