@@ -36,12 +36,15 @@ class ViewController: UIViewController {
         label.isHidden = false
         button.isHidden = false
         
-        if sender.titleLabel?.text == "Action 1" {
+        if sender.tag == 0 {
             label.text = "Hello, World!"
             label.textColor = .yellow
-        } else if sender.titleLabel?.text == "Action 2" {
+        } else if sender.tag == 1 {
             label.text = "Hi, there!"
             label.textColor = .blue
+        } else if sender.tag == 2 {
+            label.isHidden = true
+            button.isHidden = true
         }
     }
 }
