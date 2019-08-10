@@ -40,19 +40,51 @@
                                     <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGq-NB-sjY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azp-sf-fIW">
+                                <rect key="frame" x="140" y="379" width="95" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="Zcv-YB-UQd"/>
+                                    <constraint firstAttribute="height" constant="45" id="yHI-Zc-NaU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Action 2"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nxN-8n-4za"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3f-cj-cyA">
+                                <rect key="frame" x="140" y="311" width="95" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JhV-zV-PH7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="S2k-xQ-uuk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Action 1"/>
+                                <connections>
+                                    <action selector="pressedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gi8-GA-drP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36395561695098877" green="0.79001957178115845" blue="0.3898465633392334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="azp-sf-fIW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="5gZ-1q-dZ1"/>
+                            <constraint firstItem="l3f-cj-cyA" firstAttribute="width" secondItem="azp-sf-fIW" secondAttribute="width" id="89h-G7-l4L"/>
                             <constraint firstItem="xuc-UI-6r0" firstAttribute="top" secondItem="aIb-Kh-Dhu" secondAttribute="bottom" constant="246" id="8Cu-je-Lz7"/>
                             <constraint firstItem="aIb-Kh-Dhu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="E68-xh-PCn"/>
                             <constraint firstItem="aIb-Kh-Dhu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="MfW-AI-qwX"/>
+                            <constraint firstItem="xuc-UI-6r0" firstAttribute="top" secondItem="azp-sf-fIW" secondAttribute="bottom" constant="18" id="WfQ-Ar-yt2"/>
+                            <constraint firstItem="azp-sf-fIW" firstAttribute="width" secondItem="xuc-UI-6r0" secondAttribute="width" id="Ws2-7d-Bpu"/>
+                            <constraint firstItem="l3f-cj-cyA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aYp-9K-Qij"/>
                             <constraint firstItem="xuc-UI-6r0" firstAttribute="centerX" secondItem="aIb-Kh-Dhu" secondAttribute="centerX" id="cCp-Td-wgo"/>
+                            <constraint firstItem="azp-sf-fIW" firstAttribute="top" secondItem="l3f-cj-cyA" secondAttribute="bottom" constant="23" id="za2-5u-zZQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="button" destination="xuc-UI-6r0" id="Jzx-In-ZC3"/>
                         <outlet property="label" destination="aIb-Kh-Dhu" id="ZcA-bw-GRn"/>
+                        <outletCollection property="actionButtons" destination="l3f-cj-cyA" collectionClass="NSMutableArray" id="kho-8T-yDf"/>
+                        <outletCollection property="actionButtons" destination="azp-sf-fIW" collectionClass="NSMutableArray" id="N3O-Vz-X7f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
