@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // меняем цвет текста
         label.textColor = UIColor.white
         
-        //расположение текста кнопки
+        //Добавляем текста в кнопку
         button.setTitle("Get result", for: .normal)
         // цвет текста кнопки
         button.setTitleColor(.blue, for: .normal)
